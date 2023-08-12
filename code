@@ -30,7 +30,7 @@ const districtSnakeToCamel = (newObject) => {
     };
 };
 
-const reportSnakeToCamel = (newObject) {
+const reportSnakeToCamel = (newObject) => {
     return {
         totalCases: newObject.cases,
         totalCured: newObject.cured,
@@ -42,7 +42,7 @@ const reportSnakeToCamel = (newObject) {
 const intializeDbAndServer = async () => {
   try {
     db = await open({
-      filename: dbPath,
+      filename: databasePath,
       driver: sqlite3.Database,
     });
     app.listen(3003, () => console.log("server running"));
